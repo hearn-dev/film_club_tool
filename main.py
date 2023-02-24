@@ -14,7 +14,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///movies.db"
 Bootstrap(app)
 
 movie_api_key = os.environ.get('MOVIE_KEY')
-print(movie_api_key)
 
 db = SQLAlchemy(app)
 
