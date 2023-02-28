@@ -25,6 +25,14 @@
 <div class="container content">
   <h1 class="heading">Film Club Movies</h1>
   <p class="description">Movie options for Ethan and David's film club</p>
+  <div class="row content container">
+    <div class="container text-center add col-sm-2">
+      <a href="{{ url_for('add') }}" class="button">Add Movie</a>
+    </div>
+    <div class="container text-center add col-sm-2">
+      <a href="{{ url_for('random') }}" class="button mb-4">Random Movie</a>
+    </div>
+  </div>
   {% for item in movies%}
   <div class="card">
     <div
@@ -52,14 +60,6 @@
     </div>
   </div>
   {% endfor %}
-</div>
-<div class="row content container">
-  <div class="container text-center add col-sm-2">
-    <a href="{{ url_for('add') }}" class="button">Add Movie</a>
-  </div>
-  <div class="container text-center add col-sm-2">
-    <a href="{{ url_for('random') }}" class="button mb-4">Random Movie</a>
-  </div>
 </div>
 
 {% endblock %}
